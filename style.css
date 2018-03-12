@@ -1,0 +1,16 @@
+﻿body {
+    background-color: black;
+    color: white;
+}
+
+.jumbotron {
+    background-color: orange;
+}
+
+.display-4 {
+    color: black;
+}
+
+#submit {
+    border: 5px solid black;
+}
