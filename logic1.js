@@ -31,28 +31,26 @@ $("#submit").on("click", function () {
     $.ajax({
         url: queryURL,
         method: "GET"
-    })
+
 
 
 
         // After the data comes back from the API
-        .then(function (response) {
+    }).then(function (response) {
             // Storing an array of results in the results variable
             var results = response.data;
 
             // Looping over every result item
             for (var i = 0; i < results.length; i++) {
                 // Only taking action if the photo has an appropriate rating
-                if (results[i].rating !== "r" && results[i].rating !== "R") {
+                
 
                     // Creating a div with the class "item"
                     var gifDiv = $("<div class='item'>");
 
-                    // Storing the result item's rating
-                    var rating = results[i].rating;
+                
 
-                    // Creating a paragraph tag with the result item's rating
-                    var p = $("<p>").text("Rating: " + rating);
+                
 
                     // Creating an image tag
                     var searchCriteria = $("<img>");
@@ -68,8 +66,8 @@ $("#submit").on("click", function () {
 
                     // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
                     $("#gifs-appear-here").prepend(gifDiv);
-                }
             }
-        });
+            
+        })
 
-});
+     });
