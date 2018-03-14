@@ -6,7 +6,7 @@ function buildQueryURL() {
     queryURL += "?api_key=hqCndoLEBfCsFtplmnfQ3nHlpeY3qH2c";
 
     var searchTerm = $("#search-term").val().trim();
-    queryURL += "&q=" + searchTerm + "&limit=25";
+    queryURL += "&q=" + searchTerm + "&limit=40";
 
     // Logging the URL so we have access to it for troubleshooting
     console.log("---------------\nURL: " + queryURL + "\n---------------");
